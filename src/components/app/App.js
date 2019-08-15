@@ -5,6 +5,7 @@ import BlogPostFull from '../blogcontent/blogpostfull/BlogPostFull'
 import { Switch, Route } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core';
 import './App.css'
+import AboutPage from '../aboutpage/AboutPage'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -22,6 +23,7 @@ export default function App(){
             <Switch>
                 <Route exact path="/" component={Homepage}/>
                 <Route exact path="/post" component={BlogPostFull}/>
+                <Route exact path="/about" component={AboutPage}/>
                 <Route component={() => {
                     return (
                         <div
