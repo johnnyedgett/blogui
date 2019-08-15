@@ -1,13 +1,16 @@
 import React from 'react'
 import Navbar from '../navbar/Navbar'
 import Homepage from '../homepage/Homepage'
+import BlogPostFull from '../blogcontent/blogpostfull/BlogPostFull'
 import { Switch, Route } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core';
+import './App.css'
 
 const useStyles = makeStyles(theme => ({
     root: {
         marginLeft: '20vw',
-        marginRight: '20vw'
+        marginRight: '20vw',
+        fontFamily: 'Source Sans Pro'
     }
 }))
 
@@ -18,6 +21,7 @@ export default function App(){
             <Navbar/>
             <Switch>
                 <Route exact path="/" component={Homepage}/>
+                <Route exact path="/post" component={BlogPostFull}/>
                 <Route component={() => {
                     return (
                         <div
